@@ -1,0 +1,352 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+}
+
+/* 第一部分：大图和标题 */
+.hero {
+    height: 100vh;
+    background-image: url('images/catswithme.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    color: white;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* 第二部分：猫咪成员 */
+.cats {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.cats h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.cat-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.cat-card {
+    flex: 1;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+}
+
+.cat-card h3 {
+    padding: 0.8rem 1rem 0.4rem;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.cat-card p {
+    padding: 0 1rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+    margin: 0;
+}
+
+/* 第三部分：社交媒体链接 */
+.social {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: white;
+}
+
+.social h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.social-desc {
+    margin: 0 auto 2rem;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.social-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-item:hover {
+    transform: translateY(-5px);
+}
+
+.social-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.social-item span {
+    color: #333;
+    font-size: 0.9rem;
+}
+
+/* 第四部分：页脚 */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* 联系表单样式 */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #666;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #444;
+}
+
+.success-message {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 2rem auto 0;
+}
+
+.success-message i {
+    color: #4CAF50;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .cat-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 1200px) {
+    .cat-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .cat-card {
+        flex: 0 1 calc(33.333% - 1rem);
+        min-width: 250px;
+    }
+}
+
+/* 修改图片加载效果相关的样式 */
+.image-wrapper {
+    display: none;
+}
+
+.loading-spinner {
+    display: none;
+}
+
+/* 添加滚动动画效果 */
+.hero-content, .cats h2, .cat-card, .social h2, .social-item, .contact-form {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.cat-card {
+    animation-delay: calc(0.2s * var(--card-index));
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 添加悬停效果 */
+.cat-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.social-item {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-item:hover {
+    transform: translateY(-5px) scale(1.05);
+}
+
+/* 添加表单交互效果 */
+.form-group input,
+.form-group textarea {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background: #f8f8f8;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #333;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.contact-form button:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.contact-form button:hover:after {
+    width: 300px;
+    height: 300px;
+} 

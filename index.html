@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@miny-ai的猫咪空间</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/loading-attribute-polyfill/2.1.1/loading-attribute-polyfill.min.css">
+</head>
+<body>
+    <!-- 第一部分：大图和标题 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>欢迎来到@miny-ai的空间</h1>
+            <p>请尽情欣赏可爱的猫咪们吧</p>
+        </div>
+    </section>
+
+    <!-- 第二部分：猫咪成员 -->
+    <section class="cats">
+        <h2>猫咪成员</h2>
+        <div class="cat-grid">
+            <div class="cat-card">
+                <img src="images/3.jpg" alt="陈小三">
+                <h3>陈小三</h3>
+                <p>喜欢通过大叫、故意开门来吸引注意力的调皮鬼。表情装无辜、超级大只，战力强劲，是仅次于code的强者存在。</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/4.jpg" alt="陈小四">
+                <h3>陈小四</h3>
+                <p>平时优雅却渴望陪伴，喜欢用舌头舔人类换取爱抚。爱上窜下跳，和哥哥对打时会开启疯女孩儿模式，不容小觑。</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/5.jpg" alt="王小五/陈code">
+                <h3>王小五/陈code</h3>
+                <p>帅气的外表深受护士小姐姐欢迎，喜欢在角落享受独处时光。战力超群，与陈小四的关系扑朔迷离。</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/6.jpg" alt="陈小六">
+                <h3>陈小六</h3>
+                <p>憨憨的鼻涕小妞，爱在人身上踩来踩去。睡觉喜欢靠着主人，时不时来个突然喷嚏，舌头总是吐在外面的可爱小笨蛋。</p>
+            </div>
+            <div class="cat-card">
+                <img src="images/7.jpg" alt="王小七">
+                <h3>王小七</h3>
+                <p>沉浸在躺平世界的胖男孩，从苗条变成圆滚滚的吃货。对其他猫咪的纷争不予理会，疑似暗恋陈小四的安静美男子。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 第三部分：社交媒体链接 -->
+    <section class="social">
+        <h2>找到我</h2>
+        <p class="social-desc">关注@miny-ai，了解更多AI相关内容</p>
+        <div class="social-links">
+            <a href="https://v.douyin.com/iAcrVWmV/" target="_blank" class="social-item">
+                <img src="logo/douyin-icon.png" alt="抖音">
+                <span>抖音</span>
+            </a>
+            <a href="https://www.xiaohongshu.com/user/profile/673b0ac4000000001d02d393" target="_blank" class="social-item">
+                <img src="logo/xiaohongshu-icon.png" alt="小红书">
+                <span>小红书</span>
+            </a>
+            <a href="https://b23.tv/yYXLtru" target="_blank" class="social-item">
+                <img src="logo/bilibili-icon.png" alt="哔哩哔哩">
+                <span>哔哩哔哩</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 第四部分：联系表单 -->
+    <section class="contact">
+        <h2>联系我</h2>
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+            <!-- 添加你的 Web3Forms access key -->
+            <input type="hidden" name="access_key" value="f76ae242-9c44-4cf6-8af6-bc4c587cf5cb">
+            
+            <!-- 添加接收邮件地址 -->
+            <input type="hidden" name="to_email" value="minychen.ai@gmail.com">
+            
+            <div class="form-group">
+                <label for="name">姓名</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">邮箱</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">内容</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">发送</button>
+        </form>
+    </section>
+
+    <!-- 第五部分：页脚 -->
+    <footer>
+        <p>&copy; 2024 @miny-ai的猫咪空间. 保留所有权利。</p>
+    </footer>
+</body>
+</html> 
